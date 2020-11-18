@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: awillowspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: awillowspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: awillowspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: awillowspipelinesjavascriptdocker 
+          image: anwillimages.azurecr.io/awillowspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
